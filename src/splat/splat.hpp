@@ -84,18 +84,6 @@ std::vector<double> wsplat_3d(const std::vector<wpoint3d>& points,
                               const params3d& params,
                               bw3d bw);
 
-/* convert vector of triplets to vector of 3D points */
-std::vector<point3d> triplets_to_point3d(const std::vector<triplet::triplet>&,
-                                         const std::vector<mxu::meta>&);
-
-/* convert vector of triplets to vector of weighted 3D points */
-std::vector<wpoint3d> triplets_to_wpoint3d(const std::vector<triplet::triplet>&,
-                                           const std::vector<mxu::meta>&);
-
-/* */
-
-
-
 }  // namespace splat
 
 #endif

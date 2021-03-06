@@ -207,37 +207,4 @@ std::vector<double> wsplat_3d(const std::vector<wpoint3d>& points,
   return splat(points, params, bw);
 }
 
-// TODO: move these functions somewhere else
-std::vector<point3d> triplets_to_point3d(
-    const std::vector<triplet::triplet>& ts,
-    const std::vector<mxu::meta>& meta) {
-  //
-  size_t n = ts.size();
-  std::vector<point3d> ps(n);
-
-  for(size_t i = 0; i < n; ++i) {
-    const auto& t = ts[i];
-    const auto& m_i = meta[t.index];
-    ps[i] = {m_i.x, m_i.y, t.mz};
-  }
-
-  return ps;
-}
-
-std::vector<wpoint3d> triplets_to_wpoint3d(
-    const std::vector<triplet::triplet>& ts,
-    const std::vector<mxu::meta>& meta) {
-  //
-  size_t n = ts.size();
-  std::vector<wpoint3d> ps(n);
-
-  for(size_t i = 0; i < n; ++i) {
-    const auto& t = ts[i];
-    const auto& m_i = meta[t.index];
-    ps[i] = {{m_i.x, m_i.y, t.mz}, t.height};
-  }
-
-  return ps;
-}
-
 }  // namespace splat
