@@ -4,9 +4,6 @@
 #include <tuple>
 #include <vector>
 
-#include "../util/msi_sbd.hpp"
-#include "../util/msi_triplet.hpp"
-
 namespace splat {
 
 template <class... Ts>  // Use std::array instead?
